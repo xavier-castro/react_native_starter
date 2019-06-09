@@ -11,12 +11,6 @@
     "prettier": "prettier --write '*.js'",
     "format-code": "npm run prettier && npm run lint:fix"
   },
-  "lint-staged": {
-    "*.js": [
-      "yarn run format-code",
-      "git add"
-    ]
-  },
   "dependencies": {
     "expo": "^33.0.0",
     "react": "16.8.3",
