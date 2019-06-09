@@ -4,8 +4,6 @@ import styled from 'styled-components';
 const imageWidth = Dimensions.get('window').width / 2;
 
 const LogoContainerView = styled.View`
-  display: flex;
-  flex: 1;
   align-items: center;
   justify-content: center;
 `;

@@ -24,8 +24,12 @@ class Home extends Component {
       <Container>
         <StatusBar translucent={false} barStyle="light-content" />
         <Logo />
-        <InputWithButton buttonText={TEMP_BASE_CURRENCY} />
-        <InputWithButton buttonText={TEMP_QUOTE_CURRENCY} editable={false} />
+        <InputWithButton buttonText={TEMP_BASE_CURRENCY} onPress={this.handlePressBaseCurrency} />
+        <InputWithButton
+          buttonText={TEMP_QUOTE_CURRENCY}
+          onPress={this.handlePressQuoteCurrency}
+          editable={false}
+        />
       </Container>
     );
   }
