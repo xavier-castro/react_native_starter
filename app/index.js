@@ -1,4 +1,4 @@
 import React from 'react';
-import FirstScreen from './screens/FirstScreen';
+import Home from './screens/Home';
 
-export default () => <FirstScreen />;
+export default () => <Home />;
