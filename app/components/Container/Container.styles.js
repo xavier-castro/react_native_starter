@@ -3,5 +3,5 @@ import styled from 'styled-components';
 export default styled.View`
   display: flex;
   flex: 1;
-  background-color: green;
+  background-color: #595959;
 `;
