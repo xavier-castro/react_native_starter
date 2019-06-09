@@ -12,6 +12,7 @@ const TextInputView = styled.View`
   flex-direction: row;
   align-items: center;
   margin-top: 11;
+  margin-bottom: 11;
 `;
 
 const TextInputTouchableHighlight = styled.TouchableHighlight`
