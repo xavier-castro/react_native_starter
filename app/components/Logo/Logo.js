@@ -1,5 +1,4 @@
 import React from 'react';
-import { Image } from 'react-native';
 import {
   LogoContainerView, LogoImageBackground, LogoImage, LogoText,
 } from './Logo.styles';

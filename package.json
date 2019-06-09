@@ -12,6 +12,7 @@
     "format-code": "npm run prettier && npm run lint:fix"
   },
   "dependencies": {
+    "babel-eslint": "^10.0.1",
     "expo": "^33.0.0",
     "prop-types": "^15.7.2",
     "react": "16.8.3",
