@@ -5,5 +5,5 @@ export default styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
-  background-color: #595959;
+  background-color: #1ba1bf;
 `;

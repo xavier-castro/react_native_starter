@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import color from 'color';
 
 import {
   TextInputView,
@@ -9,15 +10,21 @@ import {
   TextInputTouchableHighlight,
 } from './TextInput.styles';
 
-const InputWithButton = ({ onPress, buttonText, editable = true }) => (
-  <TextInputView>
-    <TextInputTouchableHighlight onPress={onPress}>
-      <TextInputText>{buttonText}</TextInputText>
-    </TextInputTouchableHighlight>
-    <TextInputBorderView />
-    <TextInputStyledInput />
-  </TextInputView>
-);
+const InputWithButton = (props) => {
+  const { onPress, buttonText, editable = true } = props;
+
+  const underLayColor = color('#FFFFFF').darken(0.1);
+
+  return (
+    <TextInputView editable={editable}>
+      <TextInputTouchableHighlight underlayColor={underLayColor} onPress={onPress}>
+        <TextInputText>{buttonText}</TextInputText>
+      </TextInputTouchableHighlight>
+      <TextInputBorderView />
+      <TextInputStyledInput underlineColorAndroid="transparent" {...props} />
+    </TextInputView>
+  );
+};
 
 InputWithButton.propTypes = {
   onPress: PropTypes.func,

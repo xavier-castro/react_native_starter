@@ -5,7 +5,7 @@ const BORDER_RADIUS = 4;
 
 const TextInputView = styled.View`
   display: flex;
-  background-color: #f2f2f2;
+  background-color: ${props => (props.editable ? '#FFFFFF' : '#efefef')};
   width: 90%;
   height: ${INPUT_HEIGHT};
   border-radius: ${BORDER_RADIUS};
@@ -31,12 +31,19 @@ const TextInputText = styled.Text`
   padding-right: 8;
 `;
 
-const TextInputStyledInput = styled.TextInput``;
+const TextInputStyledInput = styled.TextInput`
+  height: ${INPUT_HEIGHT};
+  flex: 1;
+  font-size: 18;
+  padding-left: 8;
+  padding-right: 8;
+  color: #2a2c2b;
+`;
 
 const TextInputBorderView = styled.View`
   height: ${INPUT_HEIGHT};
   width: 0.3;
-  background-color: #2c3e50;
+  background-color: #979797;
 `;
 
 export {
