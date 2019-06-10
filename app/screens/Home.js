@@ -32,11 +32,15 @@ class Home extends Component {
     console.log('press swap currency');
   };
 
+  handleOptionsPressed = () => {
+    console.log('Menu button pressed');
+  };
+
   render() {
     return (
       <Container>
         <StatusBar translucent={false} barStyle="light-content" />
-        <Header />
+        <Header onPress={this.handleOptionsPressed} />
         <Logo />
         <InputWithButton
           buttonText={TEMP_BASE_CURRENCY}
