@@ -1,32 +1,31 @@
 import { Dimensions } from 'react-native';
-import styled from 'styled-components';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 const imageWidth = Dimensions.get('window').width / 2;
 
-const LogoContainerView = styled.View`
-  align-items: center;
-  justify-content: center;
-`;
-
-const LogoImageBackground = styled.ImageBackground`
-  align-items: center;
-  justify-content: center;
-  width: ${imageWidth};
-  height: ${imageWidth};
-`;
-
-const LogoImage = styled.Image`
-  width: ${imageWidth / 2};
-`;
-
-const LogoText = styled.Text`
-  color: white;
-  font-weight: bold;
-  font-size: 32;
-  letter-spacing: -0.5;
-  padding: 20px;
-`;
-
-export {
-  LogoContainerView, LogoImageBackground, LogoImage, LogoText,
-};
+export default EStyleSheet.create({
+  $smallContainerSize: imageWidth / 2,
+  $smallImageSize: imageWidth / 4,
+  $largeContainerSize: imageWidth,
+  $largeImageSize: imageWidth / 2,
+  container: {
+    alignItems: 'center',
+  },
+  containerImage: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '$largeContainerSize',
+    height: '$largeContainerSize',
+  },
+  logo: {
+    width: '$largeImageSize',
+    tintColor: '$primaryBlue',
+  },
+  text: {
+    color: '$white',
+    fontSize: 28,
+    letterSpacing: -0.5,
+    marginTop: 15,
+    fontWeight: '600',
+  },
+});
