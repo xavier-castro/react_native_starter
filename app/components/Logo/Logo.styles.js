@@ -22,9 +22,9 @@ const LogoImage = styled.Image`
 const LogoText = styled.Text`
   color: white;
   font-weight: bold;
-  font-size: 28;
+  font-size: 32;
   letter-spacing: -0.5;
-  margin-top: 15;
+  padding: 20px;
 `;
 
 export {

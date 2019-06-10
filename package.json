@@ -12,9 +12,12 @@
     "format-code": "npm run prettier && npm run lint:fix"
   },
   "dependencies": {
+    "@expo/vector-icons": "^10.0.2",
     "babel-eslint": "^10.0.1",
     "color": "^3.1.2",
     "expo": "^33.0.0",
+    "expo-linear-gradient": "^5.0.1",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
