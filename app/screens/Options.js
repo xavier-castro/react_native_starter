@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ScrollView, StatusBar, Platform } from 'react-native';
+import {
+  ScrollView, StatusBar, Platform, Linking,
+} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import { ListItem, Separator } from '../components/Lists';
@@ -20,7 +22,7 @@ class Options extends Component {
   };
 
   handleSitePressed = () => {
-    console.log('Handle site pressed');
+    Linking.openURL('http://handlebarlabs.com/').catch(() => alert('An error occured.'));
   };
 
   render() {
