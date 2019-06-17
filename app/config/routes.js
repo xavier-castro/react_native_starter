@@ -22,12 +22,25 @@ const HomeStack = createStackNavigator(
     },
     Themes: {
       screen: Themes,
+      navigationOptions: {
+        headerTitle: 'Themes',
+      },
     },
   },
   {
     headerMode: 'screen',
   },
 );
+
+const CurrencyListStack = createStackNavigator({
+  CurrencyList: {
+    screen: CurrencyList,
+    navigationOptions: ({ navigation }) => ({
+      headerTitle: navigation.state.params.title,
+    }),
+  },
+});
+
 export default createStackNavigator(
   {
     Home: {
@@ -37,14 +50,12 @@ export default createStackNavigator(
       },
     },
     CurrencyList: {
-      screen: CurrencyList,
-      navigationOptions: ({ navigation }) => ({
-        headerTitle: navigation.state.params.title,
-      }),
+      screen: CurrencyListStack,
     },
   },
   {
     mode: 'modal',
     cardStyle: { paddingTop: StatusBar.currentHeight },
+    headerMode: 'none',
   },
 );
