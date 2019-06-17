@@ -4,6 +4,8 @@ import {
   ScrollView, StatusBar, Platform, Linking,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { now } from 'moment';
+import { connectAlert } from '../components/Alert';
 
 import { ListItem, Separator } from '../components/Lists';
 
@@ -14,6 +16,7 @@ const ICON_SIZE = 23;
 class Options extends Component {
   static propTypes = {
     navigation: PropTypes.object,
+    alertWithType: PropTypes.func,
   };
 
   handleThemesPressed = () => {
@@ -22,7 +25,8 @@ class Options extends Component {
   };
 
   handleSitePressed = () => {
-    Linking.openURL('http://handlebarlabs.com/').catch(() => alert('An error occured.'));
+    const { alertWithType } = this.props;
+    Linking.openURL('http://handlebarlabs.com/').catch(() => alertWithType('error', 'Sorry!', "Handlebarslabs.com can't be open right now. "));
   };
 
   render() {
@@ -48,4 +52,4 @@ class Options extends Component {
   }
 }
 
-export default Options;
+export default connectAlert(Options);
