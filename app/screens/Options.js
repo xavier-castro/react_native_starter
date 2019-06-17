@@ -4,7 +4,6 @@ import {
   ScrollView, StatusBar, Platform, Linking,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { now } from 'moment';
 import { connectAlert } from '../components/Alert';
 
 import { ListItem, Separator } from '../components/Lists';
